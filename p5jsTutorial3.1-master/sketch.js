@@ -1,17 +1,19 @@
 var buttonNothing;
 var buttonHoverOver;
 var buttonClick;
-var imgCatInMug;
+var turtle;
 var button2X;
 var button2Y;
 
 function preload()
 {
-	imgCatInMug = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/CatInMug.png');
 
-	buttonClick = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonClick.png');
-	buttonHoverOver = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonHoverOver.png');
-	buttonNothing = loadImage('https://bleungwpg.github.io/p5jsTutorial3.1/buttonNothing.png');
+
+	turtle = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-frank-kwok-a/p5jsTutorial3.1-master/turtle.jpg');
+
+	buttonClick = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-frank-kwok-a/p5jsTutorial3.1-master/button_turtle-4d.png');
+	buttonHoverOver = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-frank-kwok-a/p5jsTutorial3.1-master/button_turtle-d.png');
+	buttonNothing = loadImage('https://mrleungvsa.github.io/y10-p5js-criterion-a-submission-year-10-frank-kwok-a/p5jsTutorial3.1-master/button_turtle.png');
 }
 
 function setup()
@@ -30,7 +32,7 @@ function draw()
 
 	// Example 1: easy to understand - Start
 
-	image(imgCatInMug,10,150);
+	image(turtle,10,75);
 
 	// Example 1: easy to understand - End
 
@@ -43,7 +45,7 @@ function draw()
 
 
 
-	if (mouseX > button2X && mouseX < button2X + 200 && mouseY > button2Y && mouseY < button2Y+50)
+	if (mouseX > button2X && mouseX < button2X + 150 && mouseY > button2Y && mouseY < button2Y+50)
 	{
 		image(buttonHoverOver,button2X,button2Y);
 		if (mouseIsPressed)
